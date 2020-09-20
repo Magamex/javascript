@@ -1,21 +1,25 @@
 document.querySelector('#btnGuardar').addEventListener('click', function(evento) {
-    evento.preventDefault();     //Prevenir que cambie la pagina
-    var input = document.querySelector('#inputTarea');
-    var tabla = document.querySelector('#tablaTareas');
+    var validacionInput = inputTarea.checkValidity();
 
-    var idTarea = tabla.rows.length;
-    localStorage.setItem(`${tabla.rows.length}Tarea`,`${input.value}`);
+    if(validacionInput){
+        evento.preventDefault();     //Prevenir que cambie la pagina
+        var input = document.querySelector('#inputTarea');
+        var tabla = document.querySelector('#tablaTareas');
 
-    var fila = tabla.insertRow(0);
-    fila.id = `${idTarea}Tarea`;
+        var idTarea = tabla.rows.length;
+        localStorage.setItem(`${tabla.rows.length}Tarea`,`${input.value}`);
 
-    var celda1 = fila.insertCell(0);
-    var celda2 = fila.insertCell(1);
+        var fila = tabla.insertRow(0);
+        fila.id = `${idTarea}Tarea`;
 
-    celda1.innerHTML = `${input.value}`;
-    celda2.innerHTML = `<a onclick="borrarTarea('${idTarea}')">X</a>`;
+        var celda1 = fila.insertCell(0);
+        var celda2 = fila.insertCell(1);
 
-    input.value = '';
+        celda1.innerHTML = `${input.value}`;
+        celda2.innerHTML = `<button class="btn btn-danger" onclick="borrarTarea('${idTarea}')">X</button>`;
+
+        input.value = '';
+    }
 });
 
 document.addEventListener('DOMContentLoaded',function(evento){
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded',function(evento){
         var celda2 = fila.insertCell(1);
 
         celda1.innerHTML = localStorage.getItem(i+'Tarea');
-        celda2.innerHTML = `<a onclick="borrarTarea('${i}')">X</a>`;
+        celda2.innerHTML = `<button class="btn btn-danger" onclick="borrarTarea('${i}')">X</button>`;
     }
 })
 

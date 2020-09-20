@@ -1,24 +1,44 @@
 <!DOCTYPE html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Proyecto 1</title>
-        <link rel="stylesheet" href="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Ejemplo sobre localStorage">
+        <meta name="author" content="22matutex22">
+        <title>localStorage</title>
+
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        <div>
-            <form action="#" method="post">
-                <input type="text" name="tarea" id="inputTarea">
-                <input id="btnGuardar" type="submit" value="Guardar">
-            </form>
-        </div>
-        <div>
-            Tareas
-            <div>
-                <table id="tablaTareas">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center" id="columnaTablas">
+                    <form action="" method="post" role="form">
+                        <div class="formgroup">
+                            <label for="exampleInputEmail1">Tareas</label>
+                            <input type="text" class="form-control" id="inputTarea" placeholder="Inserte Tarea" required>
+                        </div>
+                        <button id="btnGuardar" type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+                <div class="col-md-6 text-center" id="columnaFormulario">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tarea<br></th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
 
-                </table>
+                        <tbody id="tablaTareas">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        <script src="./assets/js/index.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/index.js"></script>
     </body>
 </html>
