@@ -1,31 +1,53 @@
 <!DOCTYPE html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
-        <link rel="stylesheet" href="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Formulario que simula envio de correos">
+        <meta name="author" content="22matutex22">
+        <title>Formulario de contacto</title>
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     </head>
     <body>
-        <div id="divCuerpo">
-            <h4>Enviar Nuevo Mail</h4>
-            <form action="#" type="post">
-                <label>Para:</label>
-                <br>
-                <input type="text" id="inputCorreo">
-                <br>
-                <label>Asunto:</label>
-                <br>
-                <input type="text" id="inputAsunto">
-                <br>
-                <label>Cuerpo:</label>
-                <br>
-                <textarea type="text" id="inputCuerpo"></textarea>
-                <br>
-                <button id="botonEnviar">Enviar</button>
-                <button id="botonLimpiar">Limpiar</button>
-            </form>
-            <div id="mensajeRespuesta" hidden></div>
+        <div class="container">
+            <div class="bg-dark d-flex justify-content-center row text-white">
+                <div>
+                    <h5>Formulario de Contacto</h5>
+                </div>
+            </div>
+            <div class="bg-light d-flex justify-content-center row">
+                <div class="w-75">
+                    <form role="form" class="text-left" action="#">
+                        <div class="form-group">
+                            <label for="inputCorreo">Para:</label>
+                            <input type="email" class="form-control" id="inputCorreo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAsunto">Asunto:</label>
+                            <input type="text" class="form-control" id="inputAsunto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputCuerpo">Mensaje:</label>
+                            <textarea class="form-control" rows="5" id="inputCuerpo" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-lg btn-primary" id="botonEnviar">Enviar
+                            <span><i class="fa-envelope fas"></i></span>
+                        </button>
+                        <button type="submit" class="btn btn-danger btn-lg float-right" id="botonLimpiar">Limpiar
+                            <span><i class="fa-trash-alt fas"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center row">
+                <div id="mensajeRespuesta"></div>
+            </div>
         </div>
-        <script type="text/javascript" src="./assets/js/index.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/fontAwesome.js"></script>
+        <script type="text/javascript" src="assets/js/index.js"></script>
     </body>
 </html>

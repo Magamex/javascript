@@ -1,6 +1,11 @@
 document.querySelector('#botonEnviar').addEventListener('click', function(evento){
-    evento.preventDefault();
-    enviandoCorreo();
+    var validarInputCorreo = inputCorreo.checkValidity();
+    var validarInputAsunto = inputAsunto.checkValidity();
+    var validarInputCuerpo = inputCuerpo.checkValidity();
+    if(validarInputCorreo == true && validarInputAsunto == true && validarInputCuerpo == true){
+        evento.preventDefault();
+        enviandoCorreo();
+    }
 })
 
 document.querySelector('#botonLimpiar').addEventListener('click',function(evento){
