@@ -72,7 +72,11 @@ document.getElementById('btnCotizar').addEventListener("click", function(evento)
             }
             break;
     }
-    console.log(valorSelectTipo);
-    console.log(valorCheckRadio);
-    console.log(cotizacion);
+    var divResultado = document.getElementById('resultadoCotizacion');
+    divResultado.innerHTML = '';
+    var resultadoHTML = `<h3>Tu resumen</h3>
+                        <p>${valorSelectTipo}</p>
+                        <p>${valorCheckRadio}</p>
+                        <p>${cotizacion}</p>`;
+    divResultado.innerHTML = resultadoHTML;
 });

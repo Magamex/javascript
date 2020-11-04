@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+</head>
+
+<body>
+    <div>
         <form action="#">
             <label for="selectTipo">Marca:</label>
             <select name="lugar" id="selectTipo">
@@ -14,20 +17,23 @@
                 <option value="Americano">Americano</option>
                 <option value="Europeo">Europeo</option>
             </select>
-            <br>
+            <br />
             <label for="selectAnio">Año:</label>
             <select name="anio" id="selectAnio"></select>
-            <br>
+            <br />
             <label>Tipo Seguro:</label>
-            <br>
+            <br />
             <label for="radioSimple">Simple</label>
-            <input type="radio" name="tipo" id="radioSimple" value="simple" checked>
+            <input type="radio" name="tipo" id="radioSimple" value="simple" checked />
             <label for="radioCompleto">Completo</label>
-            <input type="radio" name="tipo" id="radioCompleto" value="completo">
-            <br>
-            <input id="btnCotizar" type="submit" value="Cotizar">
+            <input type="radio" name="tipo" id="radioCompleto" value="completo" />
+            <br />
+            <input id="btnCotizar" type="submit" value="Cotizar" />
         </form>
         <div id="resultadoCotizacion"></div>
-        <script type="text/javascript" src="./assets/js/index.js"></script>
-    </body>
+    </div>
+
+    <script type="text/javascript" src="./assets/js/index.js"></script>
+</body>
+
 </html>
